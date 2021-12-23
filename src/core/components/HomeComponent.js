@@ -1,23 +1,30 @@
-import React from "react";
 
-class HomeComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
+import React, { useState, useEffect } from 'react';
 
-    }
+function HomeComponent() {
+//   
+//   const [heroes, setHeroes] = useState([]);
+//   const [initialHeroes, setInitial] = useState([]);
+
+//   useEffect(()=>{
+//     const requestForUsers = async () => {
+//       const response = await fetch('https://swapi.dev/api/people/');
+//       const data = await response.json();
+//       setHeroes((previous) => data);
+//       setInitial((previous) => data);
+//     };
+//     requestForUsers();
+//   },[]);
 
 
-    render() {
-        return (
-            <div id="home-wrapper">
-                Home
-            </div>
-        );
-    }
+//   console.log(heroes.results)
+
+  return (
+    <div>
+     Home
+    </div>
+  );
 }
-
 
 
 
