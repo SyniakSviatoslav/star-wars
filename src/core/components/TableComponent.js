@@ -12,7 +12,6 @@ import { useState, useEffect } from 'react';
 import EnhancedTableHead from '../functions';
 
 
-
 function TableComponent() {
 
 
@@ -119,8 +118,9 @@ function TableComponent() {
               className='search-input'
               onInput={(e) => handleSearch(e)}
               />
+            
             <Paper sx={{ width: '100%', mb: 2 }}>
-
+            
                 <TableContainer>
                     <Table
                         sx={{ minWidth: 750 }}
@@ -144,6 +144,7 @@ function TableComponent() {
                                             role="checkbox"
                                             tabIndex={-1}
                                             key={row.name}
+                                        
                                         >
 
                                             <TableCell
@@ -151,12 +152,13 @@ function TableComponent() {
                                                 id={labelId}
                                                 scope="row"
                                                 padding="none"
+                                                className='listItem'
                                             >
                                                 {row.name}
                                             </TableCell>
-                                            <TableCell align="right">{row.birth_year}</TableCell>
-                                            <TableCell align="right">{row.height}</TableCell>
-                                            <TableCell align="right">{row.mass}</TableCell>
+                                            <TableCell align="right" className='listItem'>{row.birth_year}</TableCell>
+                                            <TableCell align="right" className='listItem'>{row.height}</TableCell>
+                                            <TableCell align="right" className='listItem'>{row.mass}</TableCell>
                                         </TableRow>
                                     );
                                 })}

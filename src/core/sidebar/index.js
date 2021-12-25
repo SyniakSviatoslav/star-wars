@@ -1,19 +1,40 @@
 import React from "react";
-import './index.css';
-import {NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { tablePath, homePath } from "../../constants";
+import { List } from "@mui/material";
+import { ListItem } from "@mui/material";
+import { ListItemIcon } from "@mui/material";
+import { ListItemText } from "@mui/material";
+import HomeIcon from '@mui/icons-material/Home';
+import TableRowsIcon from '@mui/icons-material/TableRows';
+
+
 
 
 const Sidebar = () => {
     return (
-            <div id="sidebar-wrapper">
-               
+        <div id="sidebar-wrapper">
+            <List>
+                <NavLink to={homePath}>
+                    <ListItem className="listItem">
+                        <ListItemIcon>
+                            <HomeIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Home" />
+                    </ListItem>
+                </NavLink>
 
-                <nav>
-                    <NavLink to={homePath} className="nav-item" activeclassname="nav-item-active">Home</NavLink>
-                    <NavLink to={tablePath} className="nav-item" activeclassname="nav-item-active">Table</NavLink>
-                </nav>
-            </div>
+                <NavLink to={tablePath}>
+                    <ListItem  className="listItem">
+                        <ListItemIcon>
+                            <TableRowsIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Heroes" />
+                    </ListItem>
+                </NavLink>
+
+            </List>
+        </div>
     )
 }
 

@@ -5,6 +5,7 @@ import TableRow from '@mui/material/TableRow';
 import TableSortLabel from '@mui/material/TableSortLabel';
 import Box from '@mui/material/Box';
 import { visuallyHidden } from '@mui/utils';
+import { ArrowDropDown, ArrowDropUp } from "@mui/icons-material";
 
 
 
@@ -45,8 +46,6 @@ function EnhancedTableHead(props) {
     ];
     
 
-    
-
     return (
         <TableHead>
             <TableRow>
@@ -61,8 +60,10 @@ function EnhancedTableHead(props) {
                         <TableSortLabel
                             active={orderBy === headCell.id}
                             direction={orderBy === headCell.id ? order : 'asc'}
+                            IconComponent={ArrowDropUp}
                             onClick={createSortHandler(headCell.id)}
                         >
+                            
                             {headCell.label}
                             {orderBy === headCell.id ? (
                                 <Box component="span" sx={visuallyHidden}>

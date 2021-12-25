@@ -3,12 +3,31 @@
 }
 
 #sidebar-wrapper{
-  height: 100vw;
-  width: 300px;
-  background-color: aquamarine;
+  height: 100%;
+  width: 200px;
+ 
 }
 
 .main {
   width: 100%;
+  padding-top: 1%;
+  padding-right: 1%;
   background-color: white;
+}
+
+.home{
+  text-align: center;
+  font-size: 40px;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+a:visited{
+  color: black;
+}
+
+.listItem:hover{
+  background-color: rgb(190, 155, 223);
 }
