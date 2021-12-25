@@ -13,6 +13,8 @@ function EnhancedTableHead(props) {
         props;
     const createSortHandler = (property) => (event) => {
         onRequestSort(event, property);
+
+        
     };
 
     const headCells = [
@@ -23,30 +25,27 @@ function EnhancedTableHead(props) {
             label: 'Name',
         },
         {
-            id: 'calories',
+            id: 'birth_year',
             numeric: true,
             disablePadding: false,
             label: 'Birth Year',
         },
         {
-            id: 'fat',
+            id: 'height',
             numeric: true,
             disablePadding: false,
             label: 'Height',
         },
         {
-            id: 'carbs',
+            id: 'mass',
             numeric: true,
             disablePadding: false,
             label: 'Mass',
-        },
-        // {
-        //     id: 'protein',
-        //     numeric: true,
-        //     disablePadding: false,
-        //     label: 'Protein (g)',
-        // },
+        }
     ];
+    
+
+    
 
     return (
         <TableHead>
