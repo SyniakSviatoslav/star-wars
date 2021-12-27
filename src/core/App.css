@@ -31,3 +31,9 @@ a:visited{
 .listItem:hover{
   background-color: rgb(190, 155, 223);
 }
+
+.loader{
+  position: fixed;
+  left: 50%;
+  top: 35%;
+  }
